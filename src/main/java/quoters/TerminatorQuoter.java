@@ -12,7 +12,12 @@ public class TerminatorQuoter implements Quoter{
 
     private String message;
 
+    @InjectRandomInt(min = 2, max = 7)
+    private int repeat;
+
     public void sayQuote() {
-        System.out.println("message = " + message);
+        for (int i = 0; i < repeat; i++) {
+            System.out.println("message = " + message);
+        }
     }
 }
